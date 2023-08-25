@@ -1,6 +1,11 @@
 const express=require('express');
 const port=8004;
 const app=express();
+const router=require('./routes')
+
+
+//Use express router
+app.use('/',router);
 
 app.get('/home',(req,res)=>{
     return res.send(`<h1>Home Page Of Major Project ${0+1}</h1>`);9
