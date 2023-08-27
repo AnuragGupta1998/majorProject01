@@ -1,7 +1,7 @@
 const express=require('express');
 const port=8004;
 const app=express();
-const router=require('./routes/index')
+const router=require('./routers') //required routers
 
 
 //Use express router middleware.................
