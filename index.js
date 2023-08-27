@@ -1,12 +1,20 @@
 const express=require('express');
 const port=8004;
+const path=require('path')
 const app=express();
 const router=require('./routers') //required routers
+
+//read form data
+app.use(express.urlencoded());
 
 
 //Use express router middleware.................
 app.use('/',router);
 
+//view engine setup.......
+app.set('view engine','ejs');
+app.set('views','./views')
+// app.set('views',path.join(__dirname,'views'));
 
 
 
