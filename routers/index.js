@@ -19,7 +19,6 @@ router.get('/home',homeController.home);
 //router.use('/routerName',routerFileName)
 router.use('/user',users); //middleware calling another router
 
-router.post('/data',)
 
 
 
