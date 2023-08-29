@@ -17,8 +17,7 @@ router.get('/contact',contactC.contact);
 router.get('/contDate',contactC.contactDate);
 
 router.get('/detail',detail.detail);
-
-router.post('/data',detail.person)
+router.get('/person',detail.person);
 
 
 module.exports=router;

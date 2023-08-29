@@ -13,7 +13,7 @@ const homeController=require("../controllers/home_controller")
 console.log("router Loaded");
 
 //home router.......
-router.get('/home',homeController.home);
+router.get('/home',homeController.home);  //homeController define home function(action)
 
 //any further route access from here.......
 //router.use('/routerName',routerFileName)

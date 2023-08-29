@@ -8,36 +8,20 @@
     </title>
 </head>
 <body>
-    <h1>Server side EJS page rendring on webpage <span style="color: rgb(60, 60, 217);"> <%= title %> </span></h1>
+    
+    <%- include('_header'); -%>
+
+    <h1> Home EJS Page rendring on webpage <span style="color: rgb(60, 60, 217);"> <%= title %> </span></h1>
+
+    <%- include('_footer'); -%>
     <hr>
 
-    <form action="/data" method="post">
+    <!-- <form action="/data" method="post">
         <input  type="text" name="name" placeholder="Enter Name" required></input>
         <input type="number" name="age" placeholder="Enter age" required></input>
         <button type="submit">Add</button>
         
-    </form>
-
-    <div>
-
-        <ul>
-
-            <% for(let i of perArr ) {%> 
-
-              <span>  <%= i.name %> </span>
-              <span> <%= i.age %>  </span>
-            <% } %>
-
-
-
-
-        </ul>
-
-
-
-
-    </div>
-
+    </form> -->
     
 </body>
 </html>
