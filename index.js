@@ -2,10 +2,23 @@ const express=require('express');
 const port=8004;
 const path=require('path')
 const app=express();
+
+const expressLayout=require('express-ejs-layouts');//express-ejs-layout required to render layout
+
 const router=require('./routers') //required routers
+
+app.use(express.static('assets'));
+
+//use layout middleware
+app.use(expressLayout)
+
+//extract style and script from sub pages of the layout.ejs inside views....
+app.set('layout extractStyles' ,true);
+app.set('layout extractScripts' ,true);
 
 //read form data
 app.use(express.urlencoded());
+
 
 
 //Use express router middleware.................
