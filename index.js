@@ -2,12 +2,23 @@ const express=require('express');
 const port=8004;
 const path=require('path')
 const app=express();
+const cookiesParser=require('cookie-parser');
+
+const db=require('./config/mongoose');
 
 const expressLayout=require('express-ejs-layouts');//express-ejs-layout required to render layout
 
-const router=require('./routers') //required routers
+const router=require('./routers'); //required routers
+const cookieParser = require('cookie-parser');
 
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
+
+//read form data
+app.use(express.urlencoded());
+
+//read write cookies middleware
+app.use(cookieParser());
+
 
 //use layout middleware
 app.use(expressLayout)
@@ -16,8 +27,6 @@ app.use(expressLayout)
 app.set('layout extractStyles' ,true);
 app.set('layout extractScripts' ,true);
 
-//read form data
-app.use(express.urlencoded());
 
 
 
