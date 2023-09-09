@@ -4,7 +4,7 @@ const router=express.Router();
 
 const users=require('./users')//requiring users.js for another router
 
-const userSignUpIn=require('./userSignUpIn');
+const userSignUpIn=require('./userSignUpIn'); //router that handle with signUp/In
 
 
 // express controllers.............
